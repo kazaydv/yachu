@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YACHU — Ultralight Hammock Gear</title>
+<title>YACHU - Ultralight Hammock Gear</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -89,6 +89,7 @@ nav.solid .nav-links a:hover{color:var(--ink)}
   background:#fff;transition:all .3s;transform-origin:center;
 }
 nav.solid .ham span{background:var(--ink)}
+.ham.open span{background:var(--ink)!important;}
 .ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
@@ -116,7 +117,7 @@ nav.solid .ham span{background:var(--ink)}
 }
 
 /* ─────────────────────────────────────────
-   HERO  — clean, minimal, mobile-first
+   HERO  - clean, minimal, mobile-first
 ───────────────────────────────────────── */
 .hero{
   position:relative;
@@ -148,7 +149,7 @@ nav.solid .ham span{background:var(--ink)}
   padding:0 var(--pad-d) 52px;
 }
 
-/* Headline: ultra-thin + bold — the ONLY large element */
+/* Headline: ultra-thin + bold - the ONLY large element */
 .hero-hl{
   font-size:clamp(28px,5.5vw,72px);
   font-weight:200;
@@ -174,31 +175,31 @@ nav.solid .ham span{background:var(--ink)}
   margin-bottom:28px;
 }
 .hero-stars{
-  font-size:12px;
-  color:var(--green);
-  letter-spacing:3px;
+  font-size:18px;
+  color:#F5C842;
+  letter-spacing:4px;
   line-height:1;
 }
 .hero-divider{
-  width:1px;height:14px;
-  background:rgba(255,255,255,.25);
+  width:1px;height:16px;
+  background:rgba(255,255,255,.3);
   flex-shrink:0;
 }
 .hero-review-text{
-  font-size:11px;font-weight:400;
-  color:rgba(255,255,255,.5);
+  font-size:13px;font-weight:500;
+  color:rgba(255,255,255,.88);
   letter-spacing:.06em;
 }
 .hero-tagline{
-  font-size:16px;font-weight:300;
-  color:rgba(255,255,255,.8);
+  font-size:17px;font-weight:300;
+  color:rgba(255,255,255,.95);
   letter-spacing:.02em;
   margin-bottom:32px;
   max-width:360px;
   line-height:1.65;
 }
 
-/* ONE CTA button — green, bold, clear */
+/* ONE CTA button - green, bold, clear */
 .hero-cta{
   display:inline-flex;align-items:center;gap:10px;
   text-decoration:none;
@@ -209,7 +210,7 @@ nav.solid .ham span{background:var(--ink)}
 }
 .hero-cta:hover{background:var(--green2)}
 
-/* Nepal tag — top right, subtle */
+/* Nepal tag - top right, subtle */
 .hero-origin{
   position:absolute;top:80px;right:var(--pad-d);z-index:2;
   font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
@@ -537,7 +538,7 @@ footer{background:var(--dark);padding:52px var(--pad-d) 32px;}
 .sr.d3{transition-delay:.21s}.sr.d4{transition-delay:.28s}
 
 /* ─────────────────────────────────────────
-   RESPONSIVE — MOBILE FIRST
+   RESPONSIVE - MOBILE FIRST
 ───────────────────────────────────────── */
 @media(max-width:900px){
   nav{padding:0 var(--pad-m);position:fixed;}
@@ -565,7 +566,7 @@ footer{background:var(--dark);padding:52px var(--pad-d) 32px;}
   .pgrid{grid-template-columns:1fr 1fr;gap:2px;}
   .sec-head{flex-direction:column;align-items:flex-start;gap:12px;}
 
-  /* Story — full single column, with min-height for content room */
+  /* Story - full single column, with min-height for content room */
   .story{min-height:auto;}
   .story-body{
     grid-template-columns:1fr;
@@ -607,6 +608,8 @@ footer{background:var(--dark);padding:52px var(--pad-d) 32px;}
 .yc-ctr{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-decoration:none;display:flex;z-index:1;}
 .yc-ctr img{height:40px;width:auto;display:block;}
 nav.solid .yc-ctr img{filter:invert(1);}
+.mobile-nav.open ~ nav .yc-ctr img{filter:invert(1);}
+.mobile-nav.open ~ nav .ham span{background:var(--ink);}
 .yc-right{display:flex;align-items:center;gap:12px;}
 .yc-ico{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:0;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;flex-shrink:0;}
 .yc-ico:hover{color:#fff;}
@@ -619,8 +622,8 @@ nav.solid .yc-ico:hover{color:var(--ink);}
   .yc-ctr img{height:36px;}
 }
 /* ── Search bar ── */
-#ycSD{position:fixed;top:60px;left:0;right:0;z-index:299;background:rgba(245,242,237,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:0 var(--pad-d);height:0;overflow:hidden;transition:height .3s ease;}
-#ycSD.open{height:52px;}
+#ycSD{position:fixed;top:60px;left:0;right:0;z-index:299;background:rgba(245,242,237,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:0 var(--pad-d);height:52px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;}
+#ycSD.open{opacity:1;pointer-events:all;transform:translateY(0);}
 #ycSD svg{stroke:var(--soft);flex-shrink:0;}
 #ycSD input{flex:1;border:none;background:transparent;outline:none;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:300;color:var(--ink);letter-spacing:.04em;}
 #ycSD input::placeholder{color:var(--soft);}
@@ -675,12 +678,12 @@ nav.solid .yc-ico:hover{color:var(--ink);}
 .yc-bs{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--green);padding:4px 10px;}
 .yc-bc{display:inline-flex;gap:10px;text-decoration:none;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--green);padding:15px 32px;transition:background .2s;}
 .yc-bc:hover{background:var(--green2);}
-.yc-bi{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
-.yc-bm{overflow:hidden;background:var(--card);}
-.yc-bm img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
+.yc-bi{display:grid;grid-template-columns:1fr 1fr;gap:3px;align-self:stretch;}
+.yc-bm{overflow:hidden;background:var(--card);position:relative;}
+.yc-bm img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
 .yc-bm:hover img{transform:scale(1.04);}
 .yc-bm:first-child{grid-column:span 2;aspect-ratio:16/9;}
-.yc-bm:not(:first-child){aspect-ratio:1;}
+.yc-bm:not(:first-child){aspect-ratio:1/1;}
 /* ── Feat trust ── */
 .yc-fu{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-top:18px;margin-bottom:14px;}
 .yc-fd{width:7px;height:7px;border-radius:50%;background:var(--green);animation:ycd 1.8s ease-in-out infinite;flex-shrink:0;}
@@ -698,21 +701,53 @@ nav.solid .yc-ico:hover{color:var(--ink);}
 @media(max-width:900px){
   .products{padding:48px 0 64px!important;overflow:hidden;}
   .sec-head{padding:0 var(--pad-m);flex-direction:row!important;align-items:center!important;justify-content:space-between!important;margin-bottom:20px;}
-  .pgrid{display:flex!important;flex-direction:row!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important;gap:12px!important;padding:0 var(--pad-m)!important;width:100%!important;}
+  .pgrid{display:flex!important;flex-direction:row!important;overflow-x:scroll!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important;gap:10px!important;padding:0 var(--pad-m) 0 var(--pad-m)!important;padding-right:calc(var(--pad-m) + 18vw)!important;width:100%!important;scroll-padding-left:var(--pad-m)!important;}
   .pgrid::-webkit-scrollbar{display:none!important;}
   .pgrid .pc{flex:0 0 72vw!important;min-width:72vw!important;scroll-snap-align:start!important;}
-  .pgrid-dots{display:flex!important;justify-content:center;gap:6px;margin-top:16px;padding:0 var(--pad-m);}
+  .pgrid .pc-img{aspect-ratio:1/1!important;}
+  .pgrid-dots{display:flex!important;justify-content:center;gap:6px;margin-top:20px;padding:0 var(--pad-m);}
   .wa{bottom:80px!important;}
 }
 .pgrid-dot{width:6px;height:6px;border-radius:50%;background:rgba(17,17,16,.15);border:none;padding:0;cursor:pointer;transition:all .3s;}
 .pgrid-dot.on{background:var(--green);width:18px;border-radius:3px;}
 @media(min-width:901px){.pgrid-dots{display:none!important;}#ycSB{display:none!important;}.yc-right .nav-btn{display:inline-flex;};}
 
+/* ─────────────────────────────────────────
+   HOW IT WORKS
+───────────────────────────────────────── */
+.hiw{background:var(--card);padding:80px var(--pad-d);}
+.hiw-inner{max-width:1100px;margin:0 auto;}
+.hiw-head{text-align:center;margin-bottom:56px;}
+.hiw-tag{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:14px;}
+.hiw-title{font-size:clamp(22px,3vw,38px);font-weight:200;text-transform:uppercase;letter-spacing:-.02em;color:var(--ink);line-height:1.1;}
+.hiw-title b{font-weight:800;}
+.hiw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.hiw-step{background:var(--bg);padding:44px 36px;position:relative;}
+.hiw-num{font-size:clamp(64px,7vw,96px);font-weight:200;color:rgba(17,17,16,.05);display:block;line-height:1;margin-bottom:12px;letter-spacing:-.04em;}
+.hiw-sh{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:12px;}
+.hiw-sp{font-size:13px;font-weight:300;color:var(--mid);line-height:1.8;max-width:260px;}
+.hiw-bar{display:block;width:24px;height:2px;background:var(--green);margin-bottom:22px;}
+@media(max-width:900px){
+  .hiw{padding:60px var(--pad-m);}
+  .hiw-head{margin-bottom:36px;}
+  .hiw-steps{grid-template-columns:1fr;}
+  .hiw-step{padding:32px 28px;}
+  .hiw-sp{max-width:100%;}
+}
+/* ─────────────────────────────────────────
+   BUNDLE RESPONSIVE
+───────────────────────────────────────── */
+@media(max-width:900px){
+  .yc-b{padding:56px var(--pad-m);}
+  .yc-bg{grid-template-columns:1fr!important;gap:40px!important;}
+  .yc-bi{grid-template-columns:1fr 1fr!important;}
+}
+
 </style>
 </head>
 <body>
 
-<div id="ycPop"><div class="yc-pc"><button class="yc-px" id="ycPX">✕</button><p class="yc-pk">Exclusive offer</p><h2 class="yc-ph">Get <b>10% off</b><br>your first order.</h2><p class="yc-pp">Join 2,000+ adventure seekers. Gear drops, trail stories, and your discount — straight to your inbox.</p><div class="yc-pr"><input class="yc-pe" type="email" id="ycPE" placeholder="your@email.com"><button class="yc-pg" id="ycPG" type="button">Claim 10%</button></div><p class="yc-pf">No spam. Unsubscribe anytime.</p></div></div>
+<div id="ycPop"><div class="yc-pc"><button class="yc-px" id="ycPX">✕</button><p class="yc-pk">Exclusive offer</p><h2 class="yc-ph">Get <b>10% off</b><br>your first order.</h2><p class="yc-pp">Join 2,000+ adventure seekers. Gear drops, trail stories, and your discount - straight to your inbox.</p><div class="yc-pr"><input class="yc-pe" type="email" id="ycPE" placeholder="your@email.com"><button class="yc-pg" id="ycPG" type="button">Claim 10%</button></div><p class="yc-pf">No spam. Unsubscribe anytime.</p></div></div>
 <!-- WHATSAPP -->
 <a class="wa" href="https://api.whatsapp.com/send?phone=9818786534&text=Hello%20Yachu!" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -761,7 +796,7 @@ nav.solid .yc-ico:hover{color:var(--ink);}
   <div class="hero-content">
     <h1 class="hero-hl">From the Himalayas.<br><b>The Lightest Hammock Set.</b></h1>
 
-    <!-- Stars + review — ONE compact row -->
+    <!-- Stars + review - ONE compact row -->
     <div class="hero-meta">
       <span class="hero-stars">★★★★★</span>
       <div class="hero-divider"></div>
@@ -779,12 +814,12 @@ nav.solid .yc-ico:hover{color:var(--ink);}
 <!-- ═══ STATEMENT ═══ -->
 <section class="statement">
   <p class="stmt-label">Where Less Weighs More.</p>
-  <p class="stmt-body sr">Obsessively light. Ruthlessly tested.<br><b>Nothing extra. Nothing missing.</b></p>
+  <p class="stmt-body sr">Obsessively light. Ruthlessly tested.<br><b>Built for the trail. Ready for everything.</b></p>
   <div class="stmt-row">
     <div class="s-stat sr d1"><span class="s-val">100%</span><span class="s-key">Perfect Score</span></div>
     <div class="s-stat sr d2"><span class="s-val">51</span><span class="s-key">Verified Reviews</span></div>
     <div class="s-stat sr d3"><span class="s-val">30+</span><span class="s-key">Countries Carried</span></div>
-    <div class="s-stat sr d4"><span class="s-val">Nepal</span><span class="s-key">Made in Nepal</span></div>
+    <div class="s-stat sr d4"><span class="s-val">2023</span><span class="s-key">Made in Nepal</span></div>
   </div>
 </section>
 
@@ -863,6 +898,37 @@ nav.solid .yc-ico:hover{color:var(--ink);}
 </section>
 
 
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="hiw">
+  <div class="hiw-inner">
+    <div class="hiw-head">
+      <p class="hiw-tag sr">As Simple As It Gets</p>
+      <h2 class="hiw-title sr">Up in <b>60 Seconds.</b></h2>
+    </div>
+    <div class="hiw-steps">
+      <div class="hiw-step sr">
+        <span class="hiw-num">01</span>
+        <span class="hiw-bar"></span>
+        <h3 class="hiw-sh">Find Two Trees</h3>
+        <p class="hiw-sp">Any two trees, posts, or poles 3–5m apart. That's all you need.</p>
+      </div>
+      <div class="hiw-step sr d1">
+        <span class="hiw-num">02</span>
+        <span class="hiw-bar"></span>
+        <h3 class="hiw-sh">Wrap &amp; Clip</h3>
+        <p class="hiw-sp">Loop the strap, clip the carabiner. No knots. No tools. No fuss.</p>
+      </div>
+      <div class="hiw-step sr d2">
+        <span class="hiw-num">03</span>
+        <span class="hiw-bar"></span>
+        <h3 class="hiw-sh">Rest.</h3>
+        <p class="hiw-sp">Climb in and let go. Your hammock is ready before you are.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══ STORY ═══ -->
 <section class="story">
   <img class="story-img" src="https://yachu.co/cdn/shop/files/2024-12-20_10.00.00.jpg?v=1734688211&width=1600" alt="Yachu team" loading="lazy">
@@ -870,11 +936,11 @@ nav.solid .yc-ico:hover{color:var(--ink);}
   <div class="story-body">
     <div>
       <p class="story-tag sr">Our Story</p>
-      <h2 class="story-title sr">Born in<br><b>Nepal.</b></h2>
-      <p class="story-para sr">We love the outdoors. But good gear was always too heavy, too complicated, too much. So we built something different — light, simple, and free. Founded in Nepal in 2023, tested in the Himalayas, trusted by explorers worldwide.</p>
+      <h2 class="story-title sr">Made in<br><b>Nepal.</b></h2>
+      <p class="story-para sr">We love the outdoors. But good gear was always too heavy, too complicated, too much. So we built something different - light, simple, and free. Founded in Nepal in 2023, tested in the Himalayas, trusted by explorers worldwide.</p>
     </div>
     <div class="story-right sr">
-      <p class="story-quote">"The best gear is the gear you forget you're carrying."</p>
+      <p class="story-quote">"Get out more. Worry less."</p>
       <a href="https://yachu.co/pages/about-us" class="story-link">Read our story</a>
     </div>
   </div>
@@ -887,7 +953,7 @@ nav.solid .yc-ico:hover{color:var(--ink);}
     <span class="rev-lbl">Don't take our word for it.</span>
     <div class="rev-score">
       <span class="rev-stars-hd">★★★★★</span>
-      <span class="rev-count">5.0 out of 5 — 51 real reviews</span>
+      <span class="rev-count">5.0 out of 5 - 51 real reviews</span>
     </div>
   </div>
   <div class="rev-wrap">
@@ -896,7 +962,7 @@ nav.solid .yc-ico:hover{color:var(--ink);}
         <div class="rev-n">01</div>
         <div>
           <span class="rev-q">&ldquo;</span>
-          <p class="rev-txt">Feels like carrying your own luxury everywhere. Peace, relax and chill — best hammock ever.</p>
+          <p class="rev-txt">Feels like carrying your own luxury everywhere. Peace, relax and chill - best hammock ever.</p>
           <div class="rev-by"><span class="rev-s">★★★★★</span><span class="rev-who">Sarita S.</span><span class="rev-from">Portugal · Airlite Hammock</span></div>
         </div>
       </div>
@@ -904,7 +970,7 @@ nav.solid .yc-ico:hover{color:var(--ink);}
         <div class="rev-n">02</div>
         <div>
           <span class="rev-q">&ldquo;</span>
-          <p class="rev-txt">I've used Yachu since the first model — quality is exceptional, and customer service is even better than the products.</p>
+          <p class="rev-txt">I've used Yachu since the first model - quality is exceptional, and customer service is even better than the products.</p>
           <div class="rev-by"><span class="rev-s">★★★★★</span><span class="rev-who">Shashwat D.</span><span class="rev-from">Kathmandu · Ultralight + Tarp</span></div>
         </div>
       </div>
@@ -912,7 +978,7 @@ nav.solid .yc-ico:hover{color:var(--ink);}
         <div class="rev-n">03</div>
         <div>
           <span class="rev-q">&ldquo;</span>
-          <p class="rev-txt">I take my Yachu everywhere — perfect for finding stillness in every moment. Portable, strong, and beautiful.</p>
+          <p class="rev-txt">I take my Yachu everywhere - perfect for finding stillness in every moment. Portable, strong, and beautiful.</p>
           <div class="rev-by"><span class="rev-s">★★★★★</span><span class="rev-who">Angela S.</span><span class="rev-from">Kathmandu · Airlite Hammock</span></div>
         </div>
       </div>
@@ -947,22 +1013,22 @@ nav.solid .yc-ico:hover{color:var(--ink);}
   <div class="feat-body">
     <p class="feat-tag sr">Our Lightest Ever</p>
     <h2 class="feat-title sr">The Airlite.<br><b>Impossibly Light.</b></h2>
-    <p class="feat-para sr">No knots. No fuss. No wasted time. Wrap, clip, hang — you're up in under 60 seconds. Just find two trees and go.</p>
+    <p class="feat-para sr">No knots. No fuss. No wasted time. Wrap, clip, hang - you're up in under 60 seconds. Just find two trees and go.</p>
     <div class="feat-specs sr">
       <div class="fsp"><span class="fsp-v">~200g</span><span class="fsp-k">Weight</span></div>
       <div class="fsp"><span class="fsp-v">150kg</span><span class="fsp-k">Load rating</span></div>
-      <div class="fsp"><span class="fsp-v">Palm</span><span class="fsp-k">Pack size</span></div>
+      <div class="fsp"><span class="fsp-v">Fist-sized</span><span class="fsp-k">Pack size</span></div>
       <div class="fsp"><span class="fsp-v">60 sec</span><span class="fsp-k">Setup</span></div>
     </div>
     <p class="feat-price sr">$78 · Ships free, worldwide.</p>
     <div class="yc-fu"><div class="yc-fd"></div>In stock · Ships in 24h</div>
     <a href="https://yachu.co/products/airlite-hammock" class="feat-cta sr">Get the Airlite →</a>
-    <div class="yc-ft sr"><span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Free worldwide shipping</span><span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>30-day returns</span><span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Tested at altitude</span></div>
+    <div class="yc-ft sr"><span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Free worldwide shipping</span><span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>30-day returns</span><span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Made in Nepal</span></div>
   </div>
 </section>
 
 
-<section class="yc-b"><div class="yc-bg"><div><p class="yc-bk">Best Value</p><h2 class="yc-bh">The <b>Complete Setup.</b></h2><p class="yc-bp">Everything you need, nothing you don't. Hammock, tarp, and straps — the full kit, optimised for weight.</p><div class="yc-bl"><div class="yc-br"><span class="yc-brn">Airlite Hammock Set</span><span class="yc-brp">$78</span></div><div class="yc-br"><span class="yc-brn">30D Silnylon Tarp</span><span class="yc-brp">$57</span></div><div class="yc-br"><span class="yc-brn">Ultralight Straps</span><span class="yc-brp">$36</span></div></div><div class="yc-bt"><span class="yc-bw">$171</span><span class="yc-bn">$139</span><span class="yc-bs">Save $32</span></div><a href="https://yachu.co/collections/all" class="yc-bc">Shop the Bundle →</a></div><div class="yc-bi"><div class="yc-bm"><img src="https://yachu.co/cdn/shop/files/Lightest_Yachu_Hammock.jpg?v=1758187867&width=700" alt="Airlite" loading="lazy"></div><div class="yc-bm"><img src="https://yachu.co/cdn/shop/files/Solar_30D_Tarp.jpg?v=1757761924&width=700" alt="Tarp" loading="lazy"></div><div class="yc-bm"><img src="https://yachu.co/cdn/shop/files/Ultralight_Strap_for_two_pole.jpg?v=1757759550&width=700" alt="Straps" loading="lazy"></div></div></div></section>
+<section class="yc-b"><div class="yc-bg"><div><p class="yc-bk">Most Popular Bundle</p><h2 class="yc-bh">The <b>Complete Setup.</b></h2><p class="yc-bp">Everything you need, nothing you don't. Hammock, tarp, and straps - the full kit, under 1kg.</p><div class="yc-bl"><div class="yc-br"><span class="yc-brn">Airlite Hammock Set</span><span class="yc-brp">$78</span></div><div class="yc-br"><span class="yc-brn">30D Silnylon Tarp</span><span class="yc-brp">$57</span></div><div class="yc-br"><span class="yc-brn">Ultralight Straps</span><span class="yc-brp">$36</span></div></div><div class="yc-bt"><span class="yc-bw">$171</span><span class="yc-bn">$139</span><span class="yc-bs">Save $32</span></div><a href="https://yachu.co/collections/all" class="yc-bc">Shop the Bundle →</a></div><div class="yc-bi"><div class="yc-bm"><img src="https://yachu.co/cdn/shop/files/Lightest_Yachu_Hammock.jpg?v=1758187867&width=700" alt="Airlite" loading="lazy"></div><div class="yc-bm"><img src="https://yachu.co/cdn/shop/files/Solar_30D_Tarp.jpg?v=1757761924&width=700" alt="Tarp" loading="lazy"></div><div class="yc-bm"><img src="https://yachu.co/cdn/shop/files/Ultralight_Strap_for_two_pole.jpg?v=1757759550&width=700" alt="Straps" loading="lazy"></div></div></div></section>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
@@ -987,7 +1053,7 @@ nav.solid .yc-ico:hover{color:var(--ink);}
       <a href="https://yachu.co/pages/yachu-wholesale-program">Wholesale</a>
       <a href="https://yachu.co/pages/refund-policy">Returns</a>
       <a href="https://yachu.co/policies/privacy-policy">Privacy</a>
-      <a href="mailto:business@yachu.co">business@yachu.co</a>
+      <a href="/cdn-cgi/l/email-protection#b6d4c3c5dfd8d3c5c5f6cfd7d5dec398d5d9"><span class="__cf_email__" data-cfemail="8ceef9ffe5e2e9ffffccf5edefe4f9a2efe3">[email&#160;protected]</span></a>
     </div>
     <div class="ft-bot">
       <span class="ft-copy">© 2026 Yachu.co</span>
@@ -997,12 +1063,30 @@ nav.solid .yc-ico:hover{color:var(--ink);}
 </footer>
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* Search */
+const ycSrch = document.getElementById('ycSrch');
+const ycSD   = document.getElementById('ycSD');
+const ycSI   = document.getElementById('ycSI');
+const ycSC   = document.getElementById('ycSC');
+if (ycSrch && ycSD) {
+  ycSrch.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const isOpen = ycSD.classList.toggle('open');
+    if (isOpen && ycSI) { setTimeout(() => ycSI.focus(), 50); }
+  });
+  if (ycSC) ycSC.addEventListener('click', () => ycSD.classList.remove('open'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') ycSD.classList.remove('open'); });
+  document.addEventListener('click', e => {
+    if (!ycSD.contains(e.target) && e.target !== ycSrch) ycSD.classList.remove('open');
+  });
+}
+
 /* Nav */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50), {passive:true});
 
-/* Parallax — desktop only */
+/* Parallax - desktop only */
 const hero = document.getElementById('heroImg');
 const noTouch = () => matchMedia('(hover:none)').matches;
 window.addEventListener('scroll', () => {
@@ -1051,21 +1135,7 @@ document.querySelectorAll('.sr').forEach(el => io.observe(el));
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 
-  /* 1. SEARCH */
-  var ycS = document.getElementById('ycSrch');
-  var ycD = document.getElementById('ycSD');
-  var ycI = document.getElementById('ycSI');
-  var ycC = document.getElementById('ycSC');
-  if (ycS && ycD) {
-    ycS.addEventListener('click', function() {
-      var o = ycD.classList.toggle('open');
-      if (o && ycI) { ycI.focus(); }
-    });
-    if (ycC) ycC.addEventListener('click', function() { ycD.classList.remove('open'); });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') ycD.classList.remove('open'); });
-  }
-
-  /* 2. EMAIL POPUP */
+  /* 1. EMAIL POPUP */
   var pop = document.getElementById('ycPop');
   var pX  = document.getElementById('ycPX');
   var pG  = document.getElementById('ycPG');
@@ -1095,27 +1165,26 @@ document.addEventListener('DOMContentLoaded', function() {
   var grid = document.querySelector('.pgrid');
   var dots = document.querySelectorAll('.pgrid-dot');
   if (grid && dots.length) {
+    var ticking = false;
     grid.addEventListener('scroll', function() {
-      var cardW = grid.querySelector('.pc') ? grid.querySelector('.pc').offsetWidth + 12 : grid.offsetWidth * 0.72;
-      var idx = Math.round(grid.scrollLeft / cardW);
-      idx = Math.max(0, Math.min(idx, dots.length - 1));
-      dots.forEach(function(d, i) { d.classList.toggle('on', i === idx); });
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          var cardW = grid.querySelector('.pc') ? grid.querySelector('.pc').offsetWidth + 12 : grid.offsetWidth * 0.76;
+          var idx = Math.round(grid.scrollLeft / cardW);
+          idx = Math.max(0, Math.min(idx, dots.length - 1));
+          dots.forEach(function(d, i) { d.classList.toggle('on', i === idx); });
+          ticking = false;
+        });
+        ticking = true;
+      }
     }, { passive: true });
     dots.forEach(function(dot, i) {
       dot.addEventListener('click', function() {
-        var cardW = grid.querySelector('.pc') ? grid.querySelector('.pc').offsetWidth + 12 : grid.offsetWidth * 0.72;
+        var cardW = grid.querySelector('.pc') ? grid.querySelector('.pc').offsetWidth + 12 : grid.offsetWidth * 0.76;
         grid.scrollTo({ left: i * cardW, behavior: 'smooth' });
       });
-    });
-  }
-
-  /* 5. SR FALLBACK — guarantee all scroll-reveal elements appear */
-  setTimeout(function() {
-    document.querySelectorAll('.sr').forEach(function(el) { el.classList.add('on'); });
-  }, 900);
-
+    });  }
 });
 </script>
-
 </body>
 </html>
